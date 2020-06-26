@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const jsonParser = express.json()
+const loginRoutes = require('./routers/login')
+const signUpRoutes = require('./routers/signup')
 // const userRoutes = require('./routers/user')
 // const categoryRoutes = require('./routers/category')
 // const variantRoutes = require('./routers/variant')
@@ -11,11 +13,13 @@ const port = process.env.PORT || 4000
 
 app.use(jsonParser)
 
-app.listen(port, () => console.log(`The image server here... listening at http://localhost:${port}`))
+app.listen(port, () => console.log(`The iceicebaby server here... listening at http://localhost:${port}`))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
 
+app.use('/login', loginRoutes)
+app.use('/signup', signUpRoutes)
 // app.use('/users', userRoutes)
 // app.use('/categories', categoryRoutes)
 // app.use('/variants', variantRoutes)
