@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.belongsTo(models.product)
-      this.hasMany(models.lineitem)
+      this.hasMany(models.lineItem)
     }
   };
   variant.init({

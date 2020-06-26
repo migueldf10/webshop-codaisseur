@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const jsonParser = express.json()
+app.use(jsonParser)
 const loginRoutes = require('./routers/login')
 const signUpRoutes = require('./routers/signup')
 // const userRoutes = require('./routers/user')
@@ -11,7 +12,6 @@ const signUpRoutes = require('./routers/signup')
 
 const port = process.env.PORT || 4000
 
-app.use(jsonParser)
 
 app.listen(port, () => console.log(`The iceicebaby server here... listening at http://localhost:${port}`))
 
