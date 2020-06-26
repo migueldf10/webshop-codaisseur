@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const jsonParser = express.json()
 // const userRoutes = require('./routers/user')
+// const categoryRoutes = require('./routers/category')
+// const variantRoutes = require('./routers/variant')
+// const lineItemRoutes = require('./routers/lineItem')
+// const orderRoutes = require('./routers/user')
 
 const port = process.env.PORT || 4000
 
@@ -13,4 +17,8 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 
 // app.use('/users', userRoutes)
+// app.use('/categories', categoryRoutes)
+// app.use('/variants', variantRoutes)
+// app.use('/lineItems', lineItemRoutes)
+// app.use('/orders', orderRoutes)
 
