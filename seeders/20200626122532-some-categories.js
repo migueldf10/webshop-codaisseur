@@ -1,4 +1,5 @@
 ("use strict");
+const bcrypt = require("bcrypt");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -20,15 +21,6 @@ module.exports = {
             "Dream away with our delicious italian inspired flavors such as pistacchio and fior di latte. Mamma mia!",
           imageUrl:
             "https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2016/11/chocolate-ice-cream-recipe-2.jpg",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-
-        {
-          fullName: "Anne Jones",
-          email: "anne@greeting.com",
-          password: bcrypt.hashSync(password, 10),
-          address: "Teststraat 1, 1023KM, Rotterdam, Netherlands",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
