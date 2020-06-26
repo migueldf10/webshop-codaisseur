@@ -4,10 +4,12 @@ const Order = require('../models').order
 const bcrypt = require('bcrypt')
 
 router.get('/:userId', async (req, res, next) => {
+
+	// Get all orders from a given user id (in url params)
 	const limit = Math.min(req.query.limit || 25, 100)
 	const offset = req.query.offset || 0
 
-	// req.params.userId
+	const { userId } = req.params
 
 	if (!req.body.user) {
 		return res.error(400).send('you should be a user to do this')
