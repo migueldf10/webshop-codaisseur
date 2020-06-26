@@ -23,15 +23,6 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-
-        {
-          fullName: "Anne Jones",
-          email: "anne@greeting.com",
-          password: bcrypt.hashSync(password, 10),
-          address: "Teststraat 1, 1023KM, Rotterdam, Netherlands",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
       ],
       {}
     );
